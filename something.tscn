@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://dryh2r60y87wl"]
+
+[ext_resource type="Script" path="res://get_arguments.gd" id="1_xpvfl"]
+[ext_resource type="Texture2D" uid="uid://xvkq0bh85l05" path="res://fire.png" id="2_s5w8p"]
+
+[node name="Node3D" type="Node3D" node_paths=PackedStringArray("TextEditor", "SomethingCool")]
+script = ExtResource("1_xpvfl")
+TextEditor = NodePath("TextureRect/TextEdit")
+SomethingCool = NodePath("TextureRect/SomethingCool")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 214.0
+offset_bottom = 158.0
+
+[node name="TextEdit" type="TextEdit" parent="TextureRect"]
+offset_right = 695.0
+offset_bottom = 540.0
+
+[node name="SomethingCool" type="RichTextLabel" parent="TextureRect"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 503.0
+offset_bottom = 386.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Doing Something Cool"
+metadata/_edit_layout_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect/SomethingCool"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -491.0
+offset_top = -174.0
+offset_right = 492.0
+offset_bottom = 174.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_s5w8p")
+metadata/_edit_layout_mode = 1
