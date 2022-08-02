@@ -13,7 +13,6 @@ func _on_url_received( url ):
 		pass
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	OS.register_protocol("godotapp")
 	for arg in OS.get_cmdline_args():
 		print("Argument: ", arg)
 			
